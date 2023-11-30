@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author luiz.grenteski
  */
-public class exercicio10 {
+public class facaenquanto {
 
     /**
      * @param args the command line arguments
@@ -19,13 +19,20 @@ public class exercicio10 {
     public static void main(String args[]) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        System.out.println("Digite um número inteiro: ");
+        String resp;
+        
+        do {
+            System.out.println("Digite a temperatura em Celsius: ");
 
-        int n = sc.nextInt();
+            double C = sc.nextDouble();
 
-        for (int i = 1; i <= n; i++) {
-            System.out.printf("%d %d %d%n", i, i * i, i * i * i);
-        }
+            double F = (9.0 * C) / 5.0 + 32;
+
+            System.out.printf("Equivalente em Fahrenheit: %.2f%n", F);
+            System.out.printf("Deseja continuar? (s/n): ");
+            resp = sc.next();
+
+        } while (resp != "n");
 
         sc.close();
     }
