@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
-package Udemy_Objetos;
+package Udemy_Objetos.Produto;
 
 import java.util.Locale;
 import java.util.Scanner;
