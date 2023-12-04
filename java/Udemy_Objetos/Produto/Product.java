@@ -9,9 +9,9 @@ package Udemy_Objetos.Produto;
  * @author luiz.grenteski
  */
 public class Product {
-    public String name;
-    public double price;
-    public int quantity;
+    private String name;
+    private double price;
+    private int quantity;
     
     public Product(String name, double price, int quantity){
         this.name =  name;
@@ -22,6 +22,28 @@ public class Product {
     public Product(String name, double price){
         this.name =  name;
         this.price = price;
+    }
+    
+    // Set and Get Name
+    public void setName(String name){
+        this.name = name;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    //Set and Get Price
+    public void setPrice(double price){
+        this.price = price;
+    }
+    
+    public double getPrice(){
+        return price;
+    }
+    
+    public int getQuantity(){
+        return quantity;
     }
     
     public double TotalValueInStock() {

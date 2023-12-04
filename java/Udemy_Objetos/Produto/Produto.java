@@ -29,6 +29,11 @@ public class Produto {
         
         Product product = new Product(name, price);
         
+        product.setName("Computer");
+        System.out.println("Updated name: " + product.getName());
+        product.setPrice(1200.00);
+        System.out.println("Updated Price: " + product.getPrice());
+        
         System.out.println();
         System.out.println("Product data: " + product);
 
