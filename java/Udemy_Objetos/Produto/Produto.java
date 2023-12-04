@@ -20,23 +20,23 @@ public class Produto {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        Product product = new Product();
-        
         System.out.println("Enter product Data:");
         System.out.printf("Name: ");
-        product.name = sc.nextLine();
+        String name = sc.nextLine();
         
         System.out.printf("Price: ");
-        product.price = sc.nextDouble();
+        double price = sc.nextDouble();
         
         System.out.printf("Quantity: ");
-        product.quantity = sc.nextInt();
+        int quantity = sc.nextInt();
+        
+        Product product = new Product(name, price, quantity);
         
         System.out.println();
         System.out.println("Product data: " + product);
 
         System.out.printf("Enter the number of products top be added to stock: ");
-        int quantity = sc.nextInt();
+        quantity = sc.nextInt();
         product.AddProducts(quantity);
         
         System.out.println("Updated data: " + product);
