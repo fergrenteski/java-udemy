@@ -27,16 +27,13 @@ public class Produto {
         System.out.printf("Price: ");
         double price = sc.nextDouble();
         
-        System.out.printf("Quantity: ");
-        int quantity = sc.nextInt();
-        
-        Product product = new Product(name, price, quantity);
+        Product product = new Product(name, price);
         
         System.out.println();
         System.out.println("Product data: " + product);
 
         System.out.printf("Enter the number of products top be added to stock: ");
-        quantity = sc.nextInt();
+        int quantity = sc.nextInt();
         product.AddProducts(quantity);
         
         System.out.println("Updated data: " + product);
