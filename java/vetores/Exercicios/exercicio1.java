@@ -2,18 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
-package Arrays;
+package vetores.Exercicios;
+
+import java.util.Locale;
+import java.util.Scanner;
 
 /**
  *
  * @author luiz.grenteski
  */
-public class vetor2 {
+public class exercicio1 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        // TODO code application logic here
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.printf("Quantos numeros voce vai digitar? (limite 10): ");
+        
     }
 }
