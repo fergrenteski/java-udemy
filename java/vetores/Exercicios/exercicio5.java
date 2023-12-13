@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author luiz.grenteski
  */
-public class exercicio1 {
+public class exercicio5 {
 
     /**
      * @param args the command line arguments
@@ -20,27 +20,28 @@ public class exercicio1 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        System.out.printf("Quantos numeros voce vai digitar? (limite 10): ");
-        
+        System.out.printf("Quantos numeros voce vai digitar?: ");
         int n = sc.nextInt();
-        while(n > 10 || n < 0) {
-            System.out.printf("Número inválido, digite outro: ");
-            n = sc.nextInt();
-        }
-        int[] vect = new int[n];
-
+        
+        double vect[] = new double[n];
         for(int i = 0; i < vect.length; i++){
             System.out.printf("Digite um número: ");
-            vect[i] = sc.nextInt();
+            vect[i] = sc.nextDouble();
         }
         
-        System.out.printf("Número negativos: %n");
+        double maiorNumero = vect[0];
+        int posicao = 0;
+        
         for(int i = 0; i < vect.length; i++){
-            if(vect[i] < 0){
-            System.out.printf("%s%n", vect[i]);
+            if(maiorNumero < vect[i]){
+                maiorNumero = vect[i];
+                posicao = i;
             }
         }
-        sc.close();
         
+        System.out.printf("%nMaior Valor = %.2f", maiorNumero);
+        System.out.printf("%nPosição do maior valor = %d", posicao);
+        
+        sc.close();
     }
 }

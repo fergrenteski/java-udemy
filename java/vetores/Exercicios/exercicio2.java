@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author luiz.grenteski
  */
-public class exercicio1 {
+public class exercicio2 {
 
     /**
      * @param args the command line arguments
@@ -20,27 +20,28 @@ public class exercicio1 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        System.out.printf("Quantos numeros voce vai digitar? (limite 10): ");
-        
+        System.out.printf("Quantos numeros voce vai digitar?: ");
         int n = sc.nextInt();
-        while(n > 10 || n < 0) {
-            System.out.printf("Número inválido, digite outro: ");
-            n = sc.nextInt();
-        }
-        int[] vect = new int[n];
-
+        
+        double vect[] = new double[n];
+        double sum = 0;
+        
         for(int i = 0; i < vect.length; i++){
             System.out.printf("Digite um número: ");
-            vect[i] = sc.nextInt();
+            vect[i] = sc.nextDouble();
+            sum += vect[i];
         }
         
-        System.out.printf("Número negativos: %n");
+        double avg = sum / vect.length;
+        
+        System.out.println();
+        System.out.printf("Valores: ");
         for(int i = 0; i < vect.length; i++){
-            if(vect[i] < 0){
-            System.out.printf("%s%n", vect[i]);
-            }
+            System.out.printf("%.2f ", vect[i]);
         }
-        sc.close();
+        System.out.printf("%nSoma: %.2f", sum);
+        System.out.printf("%nMedia: %.2f", avg);
         
+        sc.close();
     }
 }

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author luiz.grenteski
  */
-public class exercicio1 {
+public class exercicio4 {
 
     /**
      * @param args the command line arguments
@@ -20,27 +20,28 @@ public class exercicio1 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         
-        System.out.printf("Quantos numeros voce vai digitar? (limite 10): ");
-        
+        System.out.printf("Quantos numeros voce vai digitar?: ");
         int n = sc.nextInt();
-        while(n > 10 || n < 0) {
-            System.out.printf("Número inválido, digite outro: ");
-            n = sc.nextInt();
-        }
-        int[] vect = new int[n];
-
+        
+        int vect[] = new int[n];
+        
         for(int i = 0; i < vect.length; i++){
             System.out.printf("Digite um número: ");
             vect[i] = sc.nextInt();
         }
         
-        System.out.printf("Número negativos: %n");
+        int qtdPares = 0;
+        
+        System.out.printf("%nNumeros Pares: %n");
         for(int i = 0; i < vect.length; i++){
-            if(vect[i] < 0){
-            System.out.printf("%s%n", vect[i]);
+            if(vect[i] % 2 == 0){
+                System.out.printf("%d ", vect[i]);
+                qtdPares ++;
             }
         }
-        sc.close();
         
+        System.out.printf("%n%nQuantidade de pares = %d",qtdPares);
+        
+        sc.close();
     }
 }
