@@ -43,5 +43,6 @@ public class exemplo {
         } else {
             System.out.printf("Larger area: Y");
         }
+        sc.close();
     }
 }

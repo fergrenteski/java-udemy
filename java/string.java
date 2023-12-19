@@ -30,8 +30,6 @@ public class string {
         int j = original.lastIndexOf("Cc");
         
         String[] vect = original.split(" ");
-        String word1 = vect[0];
-        String word2 = vect[1];
         
         System.out.println("Original: " + original);
         System.out.println("toLowerCase: " + s01);

@@ -48,5 +48,7 @@ public class Produto {
         product.RemoveProducts(quantity);
         
         System.out.println("Updated data: " + product);
+
+        sc.close();
     }
 }

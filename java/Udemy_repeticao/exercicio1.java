@@ -26,5 +26,7 @@ public class exercicio1 {
             System.out.printf("Senha inválida %n");
         }
         System.out.printf("Aceso permitido %n");
+
+        sc.close();
     }
 }

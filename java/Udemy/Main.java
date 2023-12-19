@@ -34,5 +34,6 @@ public class Main {
         System.out.println(s2);
         System.out.println(s3);
         
+        sc.close();
     }
 }
