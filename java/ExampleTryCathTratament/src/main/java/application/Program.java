@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 import model.entities.Reservation;
-import model.exceptions.DomainException;
+import model.exceptions.BusinessException;
 
 /**
  *
@@ -40,7 +40,7 @@ public class Program {
             
         } catch (ParseException ex) {
             System.out.println("Invalid date format");
-        } catch (DomainException ex) {
+        } catch (BusinessException ex) {
             System.out.println(ex.getMessage());
         } catch (RuntimeException ex) {
             System.err.println("Unexpected Error");

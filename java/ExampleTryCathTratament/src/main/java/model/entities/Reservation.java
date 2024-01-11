@@ -4,7 +4,7 @@ package model.entities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-import model.exceptions.DomainException;
+import model.exceptions.BusinessException;
 
 public class Reservation {
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -15,13 +15,13 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(Integer roomNumber, Date checkIn, Date checkOut) throws DomainException {
+    public Reservation(Integer roomNumber, Date checkIn, Date checkOut) throws BusinessException {
         
         if(!checkOut.after(checkIn)) {
-            throw new DomainException("Erron in reservation: Check-out date must be after check-in date");
+            throw new BusinessException("Erron in reservation: Check-out date must be after check-in date");
         }
         if(!checkOut.after(checkIn)) {
-            throw new DomainException("Erron in reservation: Check-out date must be after check-in date");
+            throw new BusinessException("Erron in reservation: Check-out date must be after check-in date");
         }
         this.roomNumber = roomNumber;
         this.checkIn = checkIn;
@@ -49,15 +49,15 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
     
-    public void updateDates(Date checkIn, Date checkOut) throws DomainException {
+    public void updateDates(Date checkIn, Date checkOut) throws BusinessException {
         
         Date now = new Date();
             
             if(checkIn.before(now) || checkOut.before(now)) {
-                throw new DomainException("Error in reservation: Reservation dates for update must be future dates");
+                throw new BusinessException("Error in reservation: Reservation dates for update must be future dates");
             }
             if(!checkOut.after(checkIn)) {
-                throw new DomainException("Erron in reservation: Check-out date must be after check-in date");
+                throw new BusinessException("Erron in reservation: Check-out date must be after check-in date");
             }
             this.checkIn = checkIn;
             this.checkOut = checkOut;
