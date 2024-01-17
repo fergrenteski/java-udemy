@@ -2,7 +2,6 @@
 package application;
 
 import entities.CarRental;
-import entities.Invoice;
 import entities.Vehicle;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
