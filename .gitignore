@@ -29,3 +29,15 @@
 /java/PipelinesExample/target/
 /java/StreamExercise/target/
 /java/EmployeeStream/target/
+/java/jdbc1/build.xml
+/java/jdbc1/build/classes/.netbeans_automatic_build
+/java/jdbc1/build/classes/.netbeans_update_resources
+/java/jdbc1/build/classes/application/Program.class
+/java/jdbc1/build/classes/db/DB.class
+/java/jdbc1/build/classes/db/DbException.class
+/java/jdbc1/build/classes/db/DriverManager.class
+/java/jdbc1/nbproject/build-impl.xml
+/java/jdbc1/nbproject/genfiles.properties
+/java/jdbc1/nbproject/private/private.properties
+/java/jdbc1/nbproject/project.properties
+/java/jdbc1/nbproject/project.xml
